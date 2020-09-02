@@ -1,25 +1,44 @@
-$.get("https://ipinfo.io?token=3da0c870dc0319", function(response) {
-  document.querySelector('#location').innerHTML = response.city + ", " + response.country;
-}, "jsonp");
+;(function(){
+  "use strict";
 
-document.querySelector('#user-link').addEventListener('click', e =>{
-  if (document.querySelector('#user-panel').style.display == 'none'){
-    if (document.querySelector('#apps-panel').style.display == 'block'){
-      document.querySelector('#apps-panel').style.display = 'none';
-    }
-    document.querySelector('#user-panel').style.display = 'block';
-  }else{
-    document.querySelector('#user-panel').style.display = 'none';
-  }
-});
+  let userPanel = document.querySelector('#user-panel');
+  let appsPanel = document.querySelector('#apps-panel');
+  let userLink = document.querySelector('#user-link');
+  let appsLink = document.querySelector('#apps-link');
+  let location = document.querySelector('#location');
 
-document.querySelector('#apps-link').addEventListener('click', e =>{
-  if (document.querySelector('#apps-panel').style.display == 'none'){
-    document.querySelector('#apps-panel').style.display = 'block';
-    if (document.querySelector('#user-panel').style.display == 'block'){
-      document.querySelector('#user-panel').style.display = 'none';
-    }
-  }else{
-    document.querySelector('#apps-panel').style.display = 'none';
+  function visible(element){
+    return element.style.display == 'block' ? true : false;
   }
-});
+
+  function toggleUserPanel(){
+    let v = visible(userPanel);
+    if (!v){
+      userPanel.style.display = 'block'
+      if (visible(appsPanel)){
+        appsPanel.style.display = 'none';
+      }
+    }else{
+      userPanel.style.display = 'none';
+    }
+  }
+
+  function toggleAppsPanel(){
+    let v = visible(appsPanel);
+    if (!v){
+      appsPanel.style.display = 'block'
+      if (visible(userPanel)){
+        userPanel.style.display = 'none';
+      }
+    }else{
+      appsPanel.style.display = 'none';
+    }
+  }
+
+  $.get("https://ipinfo.io?token=3da0c870dc0319", function(response) {
+    location.innerHTML = response.city + ", " + response.country;
+  }, "jsonp");
+
+  userLink.addEventListener('click', toggleUserPanel);
+  appsLink.addEventListener('click', toggleAppsPanel);
+})();
