@@ -12,7 +12,7 @@ Just a Google clone by <a href="https://github.com/kenliten/">kenliten</a>
 <h2>Getting started</h2>
 
 <q>
-  To display without download any file just click <a href="https://github.com/kenliten/">here</a>.
+  To display without download any file just click <a href="http://kenliten.github.io/google-clone">here</a>.
 </q>
 
 To test in your own machine, follow these steps:
