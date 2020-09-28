@@ -1,0 +1,23 @@
+{
+  "name": "google-clone",
+  "version": "1.0.0",
+  "description": "Just a Google clone by <a href=\"https://github.com/kenliten/\">kenliten</a>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenliten/google-clone.git"
+  },
+  "keywords": [],
+  "author": "kenliten",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/kenliten/google-clone/issues"
+  },
+  "homepage": "https://github.com/kenliten/google-clone#readme",
+  "dependencies": {
+    "https-server": "^0.1.2"
+  }
+}
