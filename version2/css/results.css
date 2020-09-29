@@ -136,7 +136,7 @@ main{
 }
 
 .result-main a{
-    color: #440dab;
+    color: #1a3ad7;
     font-size: 20px;
 }
 
@@ -254,6 +254,44 @@ footer{
     padding: 14px 24px 14px 0;
 }
 
+.pagination{
+    margin-top: 16px;
+}
+
+.pagination-container{
+    text-align: center;
+}
+
+.page{
+    display: inline-block;
+    padding-top: 27px;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #1a3ad7;
+    background-position-x: -74px;
+    vertical-align: bottom;
+    background-image: url("https://www.google.com/images/nav_logo299.webp");
+}
+
+.page:hover{
+    color: #1a3ad7;
+}
+
+.page.g{
+    padding-left: 38px;
+    background-position-x: -20px !important;
+}
+
+.page.last{
+    padding-right: 52px;
+    padding-left: 0;
+    background-position-x: -74px !important;
+}
+
+.page.next{
+    background-image: none;
+}
+
 @media (max-width: 590px){
 
     .right-tabs{
@@ -301,7 +339,7 @@ footer{
         width: 90% !important;
     }
 
-    main > div.result, main > div.suggestions, main > div.related{
+    main > div.result, main > div.suggestions, main > div.related, .pagination{
         width: 100% !important;
     }
 
